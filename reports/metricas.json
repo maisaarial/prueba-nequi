@@ -1,0 +1,42 @@
+{
+  "tasa_default": 0.1056,
+  "n_modelamiento": 3930,
+  "variables": [
+    "avg_monthly_topups",
+    "has_bureau",
+    "alt_pay_avg",
+    "pct_p2p_transfers",
+    "digital_engagement_score"
+  ],
+  "validacion": {
+    "train": {
+      "AUC": 0.7852,
+      "Gini": 0.5704,
+      "KS": 0.4474,
+      "Brier": 0.0775
+    },
+    "test": {
+      "AUC": 0.7716,
+      "Gini": 0.5432,
+      "KS": 0.4438,
+      "Brier": 0.0786
+    },
+    "oot": {
+      "AUC": 0.7856,
+      "Gini": 0.5712,
+      "KS": 0.4557,
+      "Brier": 0.1029
+    }
+  },
+  "auc_ic95": {
+    "train": "[0.754, 0.816]",
+    "test": "[0.718, 0.822]",
+    "oot": "[0.747, 0.822]"
+  },
+  "psi_score": {
+    "train vs test": 0.0177,
+    "train vs OOT": 0.1092,
+    "test vs OOT": 0.1118
+  },
+  "intercepto_recalibrado": -2.0457
+}
